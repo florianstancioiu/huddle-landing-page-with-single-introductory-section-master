@@ -1,0 +1,215 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--violet);
+  background-image: url("../images/bg-mobile.svg");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 74px 80px;
+  font-family: "Open Sans";
+  color: white;
+}
+
+.logo {
+  max-width: 240px;
+  margin-bottom: 140px;
+}
+
+.hero-img {
+  margin-bottom: 140px;
+  max-width: 100%;
+}
+
+.community-section {
+  text-align: center;
+}
+
+.community-section h1 {
+  font-family: "Poppins";
+  font-size: 44px;
+  margin-bottom: 54px;
+}
+
+.community-section .description {
+  font-size: 31px;
+  margin-bottom: 54px;
+}
+
+.btn-primary {
+  border: none;
+  background-color: white;
+  width: 400px;
+  text-align: center;
+  padding: 18px 0;
+  color: var(--violet);
+  border-radius: 60px;
+  font-size: 28px;
+  margin-bottom: 125px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  color: white;
+  background-color: var(--soft-magenta);
+}
+
+.icons-section {
+  text-align: center;
+}
+
+.icons-section .fa-brands {
+  border: 2px solid white;
+  width: 55px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 18px;
+  margin-right: 20px;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icons-section .fa-brands:hover {
+  color: var(--soft-magenta);
+  border-color: var(--soft-magenta);
+}
+
+.icons-section .fa-brands:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 1283px) {
+  body {
+    display: grid;
+    place-items: center;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("../images/bg-desktop.svg");
+  }
+
+  main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1282px;
+    margin: 0 auto;
+    gap: 60px;
+  }
+
+  .hero-section,
+  .community-section {
+    width: 50%;
+    text-align: left;
+  }
+
+  .icons-section {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .logo {
+    margin-bottom: 100px;
+  }
+
+  .hero-img {
+    margin-bottom: 70px;
+  }
+
+  .community-section h1 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+  }
+
+  .community-section .description {
+    font-size: 21px;
+  }
+
+  .btn-primary {
+    margin-bottom: 0;
+    width: 200px;
+    font-size: 22px;
+    padding: 14px 0;
+  }
+}
